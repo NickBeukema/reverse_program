@@ -1,0 +1,10 @@
+version: '3'
+services:
+  c-container:
+    build: .
+    volumes:
+      - .:/compiler/app:cached
+    environment:
+      FILES_TO_COMPILE: "app/reverse.c app/file_utils.c"
+      FILE_OUTPUT: "app/reverse"
+
