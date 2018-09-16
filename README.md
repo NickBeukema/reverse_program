@@ -22,7 +22,7 @@ Utilizing [auto-compile-c-programs](https://github.com/NickBeukema/auto-compile-
         git clone git@github.com:NickBeukema/reverse_program.git
         cd reverse_program
 
-1. Run the following to pull and create images:
+1. Run the following to pull and create images (this will take a while):
 
         docker-compose up
         
@@ -32,3 +32,15 @@ Utilizing [auto-compile-c-programs](https://github.com/NickBeukema/auto-compile-
          run ./reverse reverse.c reverse-reversed.not-c
          
   1. Viola! Our C-Container compiled and ran inside of the container, but synced the reversed file to our host machine.
+  
+         cat reverse-reversed.not-c
+         
+## Developer Notes
+
+If you're having issues updating the pulled Gulp setup in the Dockerfile, run the following to rebuild the image without cache:
+
+    docker-compose build --no-cache
+    
+And then run:
+
+    docker-compose up
