@@ -14,7 +14,7 @@ Options:
     
 ## Docker Usage
 
-Utilizing [auto-compile-c-programs](https://github.com/NickBeukema/auto-compile-c-programs) ([Original](https://github.com/mavieth/auto-compile-c-programs) forked for Docker usage), this provides an auto compiling development environment, watching changes to all `*.c` files and compiling. Keep in mind this all happens in a Linux "VM", so in order to run the executable, we must jump through a hoop of running it inside the same "VM". Follow these instructions for success.
+Utilizing [auto-compile-c-programs](https://github.com/NickBeukema/auto-compile-c-programs) ([Original](https://github.com/mavieth/auto-compile-c-programs) forked for Docker usage), this provides an auto compiling development environment, watching changes to all `*.c` files and compiling. Keep in mind this all happens in a Linux container (Like a VM), so in order to run the executable, we must jump through a hoop of running it inside the same container. Follow these instructions for success.
 
 1. Install Docker and Docker Compose
 1. Pull repo
