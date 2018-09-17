@@ -187,8 +187,9 @@ int main(int argc, char** argv){
   for (int i = 0; i < file_size; i++) {
 
     // Determine the corresponding reversed
-    // character index ( file_size - i )
-    int reverse_character_index = file_size - i;
+    // character index, correcting for zero based
+    // index (subtracting 1 from file_size)
+    int reverse_character_index = (file_size - 1) - i;
 
     // Pull the reverse character off of the
     // loaded file
