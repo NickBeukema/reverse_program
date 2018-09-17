@@ -37,7 +37,16 @@ Utilizing [auto-compile-c-programs](https://github.com/NickBeukema/auto-compile-
          
 ## Developer Notes
 
-If you're having issues updating the pulled Gulp setup in the Dockerfile, run the following to rebuild the image without cache:
+### Compiling Locally
+
+In order to compile locally, run the following:
+
+    clang reverse.c file_utils.c -o reverse
+    
+
+### Docker Caching issues
+
+If you're having issues updating the pulled Gulp setup in the Dockerfile, or any other docker caching, run the following to rebuild the image without cache:
 
     docker-compose build --no-cache
     
