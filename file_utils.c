@@ -1,3 +1,14 @@
+/*
+ * file_utils.c
+ * Nick Beukema
+ * 
+ * Provides an API for reading in a file and
+ * writing to a file. Also includes a verbose
+ * printing util that can be used by any
+ * programs utilizing this library
+ *
+ */
+
 #include "file_utils.h"
 #include <stdio.h>
 #include <sys/stat.h>
