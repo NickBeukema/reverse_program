@@ -88,6 +88,14 @@ int check_flags(char flag, int argc, char** argv) {
  */
 int main(int argc, char** argv){
 
+  // Check for help before counting arguments
+  int is_help = check_flags('h', argc, argv);
+
+  if(is_help) {
+    usage();
+    return 0;
+  }
+
   // Assure that there are at least three arguments
   // passed into the program. At miniumum, the first
   // one being the program name, the next two being
@@ -99,7 +107,6 @@ int main(int argc, char** argv){
   }
 
   // Check for command line arguments
-  int is_help = check_flags('h', argc, argv);
   int is_verbose = check_flags('v', argc, argv);
   int is_forced = check_flags('f', argc, argv);
 
@@ -116,10 +123,6 @@ int main(int argc, char** argv){
     return 1;
   }
 
-  if(is_help) {
-    usage();
-    return 0;
-  }
 
   if(is_verbose) {
     printf("Running in verbose mode\n");
